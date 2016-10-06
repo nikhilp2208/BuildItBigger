@@ -1,11 +1,6 @@
 package com.example.android.builditbigger;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.AsyncTask;
-import android.util.Pair;
-import android.view.View;
-import android.widget.Toast;
 
 import com.example.nikhil.p.myapplication.jokebackend.myJokeApi.MyJokeApi;
 import com.google.api.client.extensions.android.http.AndroidHttp;

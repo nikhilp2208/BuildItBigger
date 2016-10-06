@@ -9,12 +9,23 @@ android {
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        free {
+            applicationId "com.example.android.builditbigger.free"
+        }
+
+        paid {
+            applicationId "com.example.android.builditbigger.paid"
         }
     }
 }
@@ -31,4 +42,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile project(path: ':jokebackend', configuration: 'android-endpoints')
     compile project(path: ':jokesview')
+    freeCompile 'com.google.firebase:firebase-ads:9.6.0'
+    freeCompile 'com.google.android.gms:play-services:9.6.1'
 }
